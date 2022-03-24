@@ -1,0 +1,64 @@
+:root {
+    --border-line: 1px rgba(204, 204, 204, 0.5) solid;
+    --double-border-line: 2px rgba(204, 204, 204, 0.5) solid;
+  }
+html{
+    font-size: 16px;
+}
+body{
+    background-color: #000;
+    background: url();
+    color: #fff;
+}
+.js-valutes__list{
+    max-width: 480px;
+    width: 100%;
+    height: 90vh;
+    overflow-y: scroll;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px 5px rgba(175, 174, 174, 0.5);
+    background-color: #000;
+}
+.valutes__item{
+    display: flex;
+    position: relative;
+    border-top: var(--border-line);
+    border-bottom: var(--border-line);
+    text-align: center;
+}
+
+.valutes__item:first-child{
+    border-top:  var(--double-border-line);
+}
+.valutes__details{
+    max-width: 150px;
+    width: 100%;
+}
+.valutes__details:first-child {
+    text-align: left;
+}
+.valutes__details:not(:first-child) {
+    text-align: right;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(95, 95, 95, 0.5);
+    color: #fff;
+    text-align: left;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+  }
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    top: 2em;
+  }
+  .task__description {
+    width: 100%;
+    height: 10px;
+  }
